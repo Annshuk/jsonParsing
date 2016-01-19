@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<title>JSON CAll</title>
+<style>
+*{ font-family:Arial, Helvetica, sans-serif; font-size:11px;}
+p{ padding:2px 5px; display:block; margin:0;}
+p span{ padding-left:10px;}
+.ScrollContent dd .imgSize{ height:80px; margin:25px auto 10px; width:180px; text-align:center;}
+.ScrollContent dd .stickFoot{ width:100%; position:relative; font-size:11px; text-transform:capitalize;}
+.ScrollContent dd .stickFoot .price{ display:block; width:130px; float:left; background:#c1c1c1; position:relative; padding:4px 5px; height:27px; color:#333333}
+.ScrollContent dd .stickFoot .price strong, span.price{ color:#404040; display:block; background:url(images/rs.jpg) no-repeat center left; padding-left:9px}
+.ScrollContent dd .stickFoot .imgZoom{ float:right; width:50px; background:#58595b; position:relative; padding:4px 5px; height:27px; color:#b4b5b7}
+.ScrollContent dd .stickFoot .imgZoom a{ text-decoration:none;  color:#b4b5b7; display:block;}
+span.price{ display:inline!important; background:url(images/yrs.jpg) no-repeat center left; color:#fdf001}
+</style>
+<script type="text/javascript">
+$(function()
+{
+	$(document).ready(function() {
+	var jsonString, content='';
+		 $.getJSON('mans.json', "", function(data) {	 	 		
+			$.each( data.Product, function(data)			
+			{
+			content = '<dd><div class="imgSize">';
+			content +='<img src="'+ data.src +'" alt="'+ data.alt +'" title="'+ data.alt +'"  /></div>';
+			content += '<div class="stickFoot"><span class="price"> Product ID:' + data.alt + '<br/></span>';
+			content += '<span class="imgZoom"><a href="#!/KidProductInfo" class="prod_id" title="'+ data.alt +'">Details</a>';
+			content +='<a href="'+ data.zoom +'" class="zoom"> Zoom </a>';
+			content += '</span></div></dd>';					
+			});
+			$("#gallery dl.ScrollContent").html(content);
+		});
+	});
+});
+			
+</script>
+</head>
+<body>
+<div id="gallery">
+</div>
+</body>
+</html>

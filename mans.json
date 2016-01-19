@@ -1,0 +1,10 @@
+{
+"Product":[
+{"src": "products/mens/thumbs/ID1625 C1.jpg", "alt": "ID1625 C1", "zoom": "products/mens/ID1625 C1.jpg", "ref": 1625, "id": 1625},
+{"src": "products/mens/thumbs/ID1625 C2.jpg", "alt": "ID1625 C2", "zoom": "products/mens/ID1625 C2.jpg", "ref": 1625},
+{"src": "products/mens/thumbs/ID1625 C3.jpg", "alt": "ID1625 C3", "zoom": "products/mens/ID1625 C3.jpg", "ref": 1625},
+{"src": "products/mens/thumbs/ID1628 C1.jpg", "alt": "ID1628 C1", "zoom": "products/mens/ID1628 C1.jpg", "ref": 1628, "id": 1628},
+{"src": "products/mens/thumbs/ID1628 C2.jpg", "alt": "ID1628 C2", "zoom": "products/mens/ID1628 C2.jpg", "ref": 1628},
+{"src": "products/mens/thumbs/ID1628 C3.jpg", "alt": "ID1628 C3", "zoom": "products/mens/ID1628 C3.jpg", "ref": 1628}
+]
+}

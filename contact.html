@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href="css/style.css" rel="stylesheet">
+
+
+
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+
+<form id="form1" method="POST" name="FrontPage_Form1" action="response.php" onsubmit="return FrontPage_Form1_Validator(this)" language="JavaScript">
+<ul class="FormList">
+                    <li class="trrow">
+                      <div class="tdField">Name</div>
+                      <div class="tdLabel"><input type="text" size="25" name="name" class="input" /></div>
+                    </li>
+                    <li class="trrow">
+                      <div class="tdField">Mobile No</div>
+                      <div class="tdLabel"><input type="text" size="25" name="mob" class="input" /></div>
+                    </li>
+                    <li class="trrow">
+                      <div class="tdField">E-Mail id</div>
+                      <div class="tdLabel"><input type="text" size="25" name="emailid" class="input" /></div>
+                    </li>
+                    <li class="trrow">
+                      <div class="tdField">My enquiry</div>
+                      <div class="tdLabel"><textarea name="enquiry" rows="4" cols="50" class="textarea" ></textarea></div>
+                    </li>
+                   
+                    <li class="trrow">
+                    <div class="tdField"></div>
+                    <div class="tdLabel"><!--<input type="submit" name="button" id="button" value="Submit" />-->
+                    <input type="submit" name="button" value="Submit" class="btns" >&nbsp;&nbsp;
+                        <input type="reset" name="button2" value="Reset" class="btns">
+                        </div>
+                    </li>
+                  </ul>
+</form>
+  
+  
+  
+  
+<script Language="JavaScript"><!--
+function FrontPage_Form1_Validator(theForm)
+{
+
+  if (theForm.name.value == "")
+  {
+    alert("Please enter a value for the \"Name\" field.");
+    theForm.name.focus();
+    return (false);
+  }
+
+  var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzƒŠŒŽšœžŸÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ \t\r\n\f";
+  var checkStr = theForm.name.value;
+  var allValid = true;
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+  }
+  if (!allValid)
+  {
+    alert("Please enter only letter and whitespace characters in the \"Name\" field.");
+    theForm.name.focus();
+    return (false);
+  }
+
+  if (theForm.mob.value == "")
+  {
+    alert("Please enter a value for the \"Mobile Number\" field.");
+    theForm.mob.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-.";
+  var checkStr = theForm.mob.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"Mobile Number\" field.");
+    theForm.mob.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"mob\" field.");
+    theForm.mob.focus();
+    return (false);
+  }
+
+  if (theForm.emailid.value == "")
+  {
+    alert("Please enter a value for the \"Email ID\" field.");
+    theForm.emailid.focus();
+    return (false);
+  }
+
+  if (theForm.enquiry.value == "")
+  {
+    alert("Please enter a value for the \"Enquiry\" field.");
+    theForm.enquiry.focus();
+    return (false);
+  }
+  return (true);
+}
+//--></script>
+  
+  
+</body>
+</html>

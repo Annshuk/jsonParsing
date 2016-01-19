@@ -1,0 +1,638 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IDEE</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+    <script src="js/jquery.min.js"></script>    
+    <script src="js/scripts.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="js/jquery.jscrollpane.js"></script>
+<script src="js/productDatabase.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+  	<script src="js/html5.js"></script>
+    <![endif]-->
+	<!--[if lt IE 8]>
+		<div style=' clear: both; text-align:center; position: relative;'>
+			<a href="//windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a>
+		</div>
+	<![endif]-->
+<script type="text/javascript" src="js/FullBgJs.min.js"></script>
+<script type="text/javascript">
+function Handler()
+{	
+var Sheight =$(window).height();
+var aside = $("#asideBlue").height();
+var vPlayerHeight = $(".videoPlayer").height();
+var vPlayerWidth = $(".videoPlayer").width();
+var transBg = $(".heightCatch").height();
+var Rheight= $(".ReHeight").height();
+var Dynvideo = vPlayerWidth;
+$(".ReHeight").css({'height': aside - 99 +"px"});
+$(".heightCatch").css({'height': aside - 120 +"px"});
+$(".ProductDynmaic").css({'height': aside - 255 +"px", 'width':'96%'});
+$(".panelscroll").css({'height': aside - 120 +"px"});
+$(".VimioPlayer").css({'height': aside - 300 +"px", 'width' : Dynvideo});
+$("#asideBlue").css({'height': Sheight +"px"});
+$(".transparentBG").css({'height': Sheight +"px"});
+}
+function JShandler(){
+Handler()
+$(window).resize(function(){
+Handler() 
+});
+}
+    //<![CDATA[
+        $(window).load(function() { // makes sure the whole site is loaded
+            $("#status").fadeOut(); // will first fade out the loading animation
+            $("#preloader").delay(350).fadeOut("slow"); // will fade out the white DIV that covers the website.
+        })
+    //]]>
+$(document).ready(function(){
+$.supersized({
+// Functionality
+slide_interval          :   3000,		// Length between transitions
+transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+transition_speed		:	2000,		// Speed of transition
+// Components							
+slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
+slides 					:  	[			// Slideshow Images
+{image : 'images/slide3.jpg', title : '', url : ''},
+{image : 'images/slide1.jpg', title : '',url : ''},  
+{image : 'images/slide4.jpg', title : '',url : ''},
+{image : 'images/slide2.jpg', title : '',url : ''}												
+]
+});
+});
+
+</script>
+</head>
+<body>  
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+    <div id="wraper">
+<div id="SectionWrap">
+<div id="asideBlue">
+      <div class="ReHeight">
+            <!-- HEADER -->
+            <header>
+                <h1><a href="index.html"><img src="images/IDEE_logo.png"></a></h1>
+            </header>
+            <!-- END HEADER -->
+            <!-- MENU -->
+            <nav class="menu">
+                <ul id="menu">
+                    <li class="with_ul HomeTheme noborder"><a href="#!/Home">Home</a></li>
+                    <li class="BrandTheme"><a href="#!/Brand">The Brand</a></li>
+                    <li class="ProductTheme"><a href="#">Products</a>
+                    <ul class="submenu_1">
+                            <li><a href="#!/comingSoon">Sunglass</a>
+                            <ul>
+                            <li><a href="#!/Kids">Kids style</a></li>      
+                           <li><a href="#!/Mens">male style</a></li>        				    
+                            <li class="with_ul"><a href="#!/comingSoon">female style</a></li>               				    
+                            <li class="last"><a href="#!/comingSoon">unisex style</a></li>
+                            </ul>
+                            </li>      
+                           <li><a href="#!/comingSoon">Frames</a></li>  
+            			</ul>
+                        </li>
+                    <li class="MediaTheme"><a href="#">Media</a>
+                    <ul class="submenu_1">
+                      <li><a href="#!/AdCampaign">Ad Campaign</a></li>               				    
+                            <li class="with_ul"><a href="#!/mediaPR">Press Release</a></li>               				    
+            			</ul></li>
+                    <li class="StoreTheme"><a href="#!/Store">Store Locator</a></li>
+                    <li class="ContacTheme"><a href="#!/Contact">Contact Us</a></li>
+                    <li class="no_bg CareerTheme"><a href="#!/Career">Career</a></li>
+            	</ul>
+            </nav>  
+            <input type="text" id="search" />
+            <input type="button" value="Search" id="SerchBtn" onClick=" return SearchAll();" />    
+          </div>
+            <div class="rightFoot">
+            <img src="images/socialicon.png" alt="" border="0" usemap="#Map">
+            <map name="Map">
+              <area shape="rect" coords="1,0,24,21" href="https://www.facebook.com/idee.eyewear" title="Facebook" target="_blank">
+              <area shape="rect" coords="33,1,56,20" href="#" title="Twitter">
+              <area shape="rect" coords="65,1,88,20" href="#" title="GooglePlus">
+              <area shape="rect" coords="97,0,121,20" href="#" title="YouTube">
+            </map>
+            </div>      
+    </div>
+        <!-- CONTENT -->
+    <section id="content">
+    <ul>           
+<li id="Home" class="no_disp"></li>
+<li id="Brand">
+<div class="transparentBG">
+<ul class="topMenu">
+<li><a href="#!/Home">Home</a></li>
+<li  class="lastchild"><a href="#">The Brand</a></li>
+<div class="clear"></div>
+</ul>
+<div class="clear"></div>
+<div class="Content">
+<h2>The Brands</h2>
+<div class="heightCatch">
+<p style="width:60%">Be Unique. Have an attitude. Look great. Those are the mantras of today’s world. 
+Meet IDEE Eyewear – a brand that identifies with the philosophy of today’s generation. Cool, confident and arresting, IDEE Eyewear sets the wearer apart from the crowd. 
+IDEE is a symbol of social acceptance while retaining a sheen of individualism. . It has become a tribal totem; a cult of exclusiveness, a trendsetter. Unisex in appeal, it is classic in its feel and chic in its vibe. It carries in its soul the energy of the youth with the poise of the truly mature. It begins as eyewear, and evolves into a signature of rarity. </p>
+
+<p style="width:60%">Founded by Ronak Optik India Pvt. Ltd. in 1995, IDEE soon became the epicentre of chic-elegance. Marketing high quality eyewear, these iconic products are setting standards in eyewear-reaching out to customers across geographies. Media reflected its leadership status - elevated on ethic-sense and a high street sensibility. IDEE is a signature of the company’s mandate to evolve fashion into a passion of finesse.</p>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</li>
+<li id="Products">
+<div class="transparentBG">
+<ul class="topMenu">
+<li><a href="#!/Home">Home</a></li>
+<li class="lastchild"><a href="#!/Products">Product</a></li>
+<div class="clear"></div>
+</ul>
+<div class="clear"></div>
+<div class="Content">
+<h2>All Products</h2>
+<div class="ProductDynmaic">
+
+<div class="scrollPane margin45">
+<div class="productImg"><img src="images/Zoom-1456-c1.jpg" alt="idee" /></div>
+<div class="productDetails">
+<p class="blueTxt">
+<strong>PCOO1BK5</strong><br/><br/>
+<strong>description</strong><br/><br/>
+<strong>SKUS Code:</strong> 0001<br/>
+<strong>collection:</strong> 0001<br/>
+<strong>material:</strong> 0001<br/>
+<strong>color:</strong> red<br/>
+<strong>price:</strong> <span class="price">999</span><br/>
+</p>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="descBox margin45">
+<h4>Description</h4>
+<p>Vestibulum ipsum dolor, sagittis sit amet luctus ac, dignissim ac ligula. Cras est nisl, placerat lacinia ultricies non, vestibulum eu ante. Proin sollicitudin, lacus euismod eleifend condimentum.</p>
+</div>
+<div class="scrollPane">
+<br/>
+<h3>Related Product</h3>
+<div class="videoBlock" style="margin-left:0"><img src="images/product_large_01.jpg" /></div>
+<div class="videoBlock"><img src="images/product_large_01.jpg" /></div>
+<div class="videoBlock"><img src="images/product_large_01.jpg" /></div>
+</div>
+</div>
+<div class="clear"></div>
+
+</div>
+<div class="productInfo">
+<h2 style="width:100px; float:left;">Proudct Categories</h2>
+<ul class="prodCat">
+<li><a href="#!/Mens">MALE STYLE</a></li>
+<li><a href="#!/comingSoon">FEMALE STYLE</a></li>
+<li><a href="#!/comingSoon">UNISEX STYLE</a></li>
+</ul>
+
+<ul class="prodCat">
+<li><a href="#">SPECIALS</a></li>
+<li><a href="#">Polarized</a></li>
+<li><a href="#">Retro</a></li>
+<li><a href="#">Aviator</a></li>
+</ul>
+<div class="clear"></div>
+</div>
+</div>
+</li>
+<li id="Mens">
+<div class="transparentBG">
+<ul class="topMenu">
+<li><a href="#!/Home">Home</a></li>
+<li><a href="#">Product</a></li>
+<li><a href="#">Sunglass</a></li>
+<li class="lastchild"><a href="#" class="current">Kids Style</a></li>
+<div class="clear"></div>
+</ul>
+<div class="clear"></div>
+<div class="Content">
+<h2>MALE Style</h2>
+<div class="ProductDynmaic">
+<div class="scrollPane" id="MensGallery">
+<dl class="ScrollContent margin45">
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="productInfo">
+<h2 style="width:100px; float:left;">Proudct Categories</h2>
+<ul class="prodCat">
+<li><a href="#!/Mens">MALE STYLE</a></li>
+<li><a href="#!/Kids">KIDS STYLE</a></li>
+<li><a href="#!/comingSoon">FEMALE STYLE</a></li>
+<li><a href="#!/comingSoon">UNISEX STYLE</a></li>
+</ul>
+
+<ul class="prodCat">
+<li><a href="#">SPECIALS</a></li>
+<li><a href="#">Polarized</a></li>
+<li><a href="#">Retro</a></li>
+<li><a href="#">Aviator</a></li>
+</ul>
+<div class="clear"></div>
+</div>
+</div>
+</li><!--products mens-->
+<li id="Kids">
+<div class="transparentBG">
+<ul class="topMenu">
+<li><a href="#!/Home">Home</a></li>
+<li><a href="#">Product</a></li>
+<li><a href="#">Sunglass</a></li>
+<li class="lastchild"><a href="#" class="current">Kids Style</a></li>
+<div class="clear"></div>
+</ul>
+<div class="clear"></div>
+<div class="Content">
+<h2>Kids Style</h2>
+<div class="ProductDynmaic">
+<div class="scrollPane" id="Kidsgallery">
+<dl class="ScrollContent margin45">
+</dl>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="productInfo">
+<h2 style="width:100px; float:left;">Proudct Categories</h2>
+<ul class="prodCat">
+<li><a href="#!/Mens">MALE STYLE</a></li>
+<li><a href="#!/Kids">KIDS STYLE</a></li>
+<li><a href="#!/comingSoon">FEMALE STYLE</a></li>
+<li><a href="#!/comingSoon">UNISEX STYLE</a></li>
+</ul>
+
+<ul class="prodCat">
+<li><a href="#">SPECIALS</a></li>
+<li><a href="#">Polarized</a></li>
+<li><a href="#">Retro</a></li>
+<li><a href="#">Aviator</a></li>
+</ul>
+<div class="clear"></div>
+</div>
+</div>
+</li><!--products kids-->
+<li id="Media">
+<div class="transparentBG">
+<ul class="topMenu">
+<li><a href="#!/Home">Home</a></li>
+<li class="lastchild"><a href="#!/Media" class="current">Media</a></li>
+<div class="clear"></div>
+</ul>
+<div class="clear"></div>
+<div class="Content">
+<div class="heightCatch">
+<div class="videoBlock"><a href="http://player.vimeo.com/video/61442999" class="vimeo"><img src="images/video_pr3.jpg" alt="Media Ad" /></a></div>
+</div>
+</div>
+</div>
+</li><!--media-->
+<li id="AdCampaign">
+<div class="transparentBG">
+<ul class="topMenu">
+<li><a href="#!/Home">Home</a></li>
+<li><a href="#!/Media">Media</a></li>
+<li class="lastchild"><a href="#AdCampaign" class="current">Ad Campaign</a></li>
+<div class="clear"></div>
+</ul>
+<div class="clear"></div>
+<div class="Content">
+<h2>Ad Campaign</h2>
+<div class="heightCatch">
+<div class="scrollPane">
+<ul class="adCompany list4">
+<li><figure><a href="images/2011-adc4.jpg"><img src="images/media1.png"></a></figure></li>
+<li><figure><a href="images/2011-adc3.jpg"><img src="images/media2.png"></a></figure></li>
+<li><figure><a href="images/2010-adc2.jpg"><img src="images/media3.png"></a></figure></li>
+<li><figure><a href="images/2011-adc2.jpg"><img src="images/media4.png"></a></figure></li>
+<li><figure><a href="images/2012-adc1.jpg"><img src="images/media5.png"></a></figure></li>
+<li><figure><a href="images/zoomimage2.jpg"><img src="images/media6.png"></a></figure></li>                                                    
+</ul>
+</div>
+<div class="clear"></div>
+<br/><br/>
+<h3 class="subHead">Video</h3>
+<div class="videoBlock"><a href="http://player.vimeo.com/video/61442999" class="vimeo"><img src="images/video_pr3.jpg" alt="Media Ad" /></a></div>
+<div class="videoBlock"><a href="http://player.vimeo.com/video/61442898" class="vimeo"><img src="images/video_pr1.jpg" alt="Media Ad" /></a></div>
+</div>
+</div>
+</div>
+</li><!--media-->
+<li id="mediaPR">
+<div class="transparentBG">
+<ul class="topMenu">
+<li><a href="#!/Home">Home</a></li>
+<li><a href="#!/Media">Media</a></li>
+<li class="lastchild"><a href="#mediaPR">Press Release</a></li>
+<div class="clear"></div>
+</ul>
+<div class="clear"></div>
+<div class="Content">
+<h2>Press Release</h2>
+<div class="heightCatch">
+<div class="videoBlock"><a href="images/Inside_5.jpg" class="Media"><img src="images/pr_1.jpg" alt="Press Release" /></a></div>
+<div class="videoBlock"><a href="images/Inside_4.jpg" class="Media"><img src="images/pr_2.jpg" alt="Press Release" /></a></div>
+<div class="videoBlock"><a href="images/Inside_3.jpg" class="Media"><img src="images/pr_3.jpg" alt="Press Release" /></a></div>
+<div class="videoBlock"><a href="images/Inside_2.jpg" class="Media"><img src="images/pr_4.jpg" alt="Press Release" /></a></div>
+<div class="videoBlock"><a href="images/Inside_1.jpg" class="Media"><img src="images/pr_5.jpg" alt="Press Release" /></a></div>
+<div class="clear"></div>
+<br/><br/>
+<h3 class="subHead">Video</h3>
+<div class="videoBlock"><a href="http://player.vimeo.com/video/61443711" class="vimeo"><img src="images/video_pr2.jpg" alt="Press Release" /></a></div>
+
+</div>
+</div>
+</div>
+</li><!--media-->
+<li id="Store">
+<div class="transparentBG">
+<ul class="topMenu">
+<li><a href="#!/Home">Home</a></li>
+<li class="lastchild"><a href="#" class="current">Store Locator</a></li>
+<div class="clear"></div>
+</ul>
+<div class="clear"></div>
+<div class="Content">
+<div class="panelscroll">
+<form id="form2" method="get" name="FrontPage_Form1" action="" language="JavaScript">
+<ul class="FormList">
+                    <li class="trrow">
+                      <div class="tdField">City</div>
+                      <div class="tdLabel">
+                      <select class="select" id="cityname"></select>
+                        </div>
+                    </li>
+                    <li class="trrow">
+                      <div class="tdField">Store Name</div>
+                      <div class="tdLabel">  <select class="select" id="storename"></select>        </div>
+                    </li>
+                    <li class="trrow">
+                    <div class="tdField"></div>
+                    <div class="tdLabel"><input type="reset" value="Reset " class="btns" id="reset">
+                        </div>
+                    </li>
+                  </ul>
+<div id="adressBox">
+<div class="overflow">
+</div>
+</div>  
+</form>
+</div>
+</div>
+</div>
+</li><!--store-->
+<li id="Contact">
+<div class="transparentBG">
+<ul class="topMenu">
+<li><a href="#!/page_home">Home</a></li>
+<li class="lastchild"><a href="#!/" class="current">Contact us</a></li>
+<div class="clear"></div>
+</ul>
+<div class="clear"></div>
+<div class="Content">
+<h2>Contact Us</h2>
+<div class="panelscroll" style="margin-left:20px">
+<div class="descBox">
+<br/>
+<h3 class="yellowBold">Ronak Optik India Pvt. Ltd.</h3>
+<p>7B, Elgin Road, Kolkata – 700 020.</p>
+<p>Mail us: <a href="mailto:info@ronakoptik.com">info@ronakoptik.com</a>
+</p>
+</div>
+
+<iframe src="contact.html" allowtransparency="true" frameborder="0" width="100%" height="500"></iframe>
+
+</div>
+  </div>
+  </div>
+</li> <!-- end Contatc Us Page -->
+<li id="Career">
+<div class="transparentBG">
+<ul class="topMenu">
+<li><a href="#!/page_home">Home</a></li>
+<li class="lastchild"><a href="#!/" class="current">Career</a></li>
+<div class="clear"></div>
+</ul>
+<div class="clear"></div>
+<div class="Content">
+<h2>Career</h2>
+<div class="panelscroll" style="margin-left:20px">
+<div class="descBox">
+<br/>
+<p>Mail us: <a href="mailto:info@ronakoptik.com">info@ronakoptik.com</a>
+</p>
+</div>
+
+</div>
+  </div>
+  </div>
+</li> <!-- end Career Page -->
+<li id="ProductInfo">
+<div class="transparentBG">
+<ul class="topMenu">
+<li><a href="#!/Home">Home</a></li>
+<li><a href="#">Mens</a></li>
+<li><a href="#">Sunglass</a></li>
+<li><a href="#">Retro</a></li>
+<div class="clear"></div>
+</ul>
+<div class="clear"></div>
+
+<div class="Content">
+<h2>Male Style</h2>
+<div class="ProductDynmaic">
+<div id="productInfoDetails">
+<div class="scrollPane margin45">
+</div>
+</div>
+<div class="scrollPane" id="ManRealtedProduct"><br/>
+<h3>Related Product</h3>
+<dl class="ScrollContent">
+</dl>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="productInfo">
+<h2 style="width:100px; float:left;">Proudct Categories</h2>
+<ul class="prodCat">
+<li><a href="#!/Mens">MALE STYLE</a></li>
+<li><a href="#!/Womens">FEMALE STYLE</a></li>
+<li><a href="#">UNISEX STYLE</a></li>
+</ul>
+
+<ul class="prodCat">
+<li><a href="#">SPECIALS</a></li>
+<li><a href="#">Polarized</a></li>
+<li><a href="#">Retro</a></li>
+<li><a href="#">Aviator</a></li>
+</ul>
+<div class="clear"></div>
+</div>
+</div>
+</li><!--Product Details-->
+<li id="KidProductInfo">
+<div class="transparentBG">
+<ul class="topMenu">
+<li><a href="#!/Home">Home</a></li>
+<li><a href="#">Mens</a></li>
+<li><a href="#">Sunglass</a></li>
+<li><a href="#">Retro</a></li>
+<div class="clear"></div>
+</ul>
+<div class="clear"></div>
+<div class="Content">
+<h2>Kid Style</h2>
+<div class="ProductDynmaic">
+<div id="kidproductInfoDetails">
+<div class="scrollPane margin45">
+</div>
+</div>
+<div class="scrollPane" id="KidRealtedProduct"><br/>
+<h3>Related Product</h3>
+<dl class="ScrollContent">
+
+</dl>
+</div>
+
+</div>
+</div>
+<div class="clear"></div>
+<div class="productInfo">
+<h2 style="width:100px; float:left;">Proudct Categories</h2>
+<ul class="prodCat">
+<li><a href="#!/Mens">MALE STYLE</a></li>
+<li><a href="#!/Womens">FEMALE STYLE</a></li>
+<li><a href="#">UNISEX STYLE</a></li>
+</ul>
+
+<ul class="prodCat">
+<li><a href="#">SPECIALS</a></li>
+<li><a href="#">Polarized</a></li>
+<li><a href="#">Retro</a></li>
+<li><a href="#">Aviator</a></li>
+</ul>
+<div class="clear"></div>
+</div>
+</div>
+</li><!--Product Details-->
+</ul>   
+        </section>
+        <!-- END CONTENT -->
+</div>
+</div>
+<p class="footCopyright">&copy; Ronak optik india pvt ltd | <a href="mailto:info@ronakoptik.com">info@ronakoptik.com</a></p>
+</body>
+<script Language="JavaScript"><!--
+function FrontPage_Form1_Validator(theForm)
+{
+
+  if (theForm.name.value == "")
+  {
+    alert("Please enter a value for the \"Name\" field.");
+    theForm.name.focus();
+    return (false);
+  }
+
+  var checkOK = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzƒŠŒŽšœžŸÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ \t\r\n\f";
+  var checkStr = theForm.name.value;
+  var allValid = true;
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+  }
+  if (!allValid)
+  {
+    alert("Please enter only letter and whitespace characters in the \"Name\" field.");
+    theForm.name.focus();
+    return (false);
+  }
+
+  if (theForm.mob.value == "")
+  {
+    alert("Please enter a value for the \"Mobile Number\" field.");
+    theForm.mob.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-.";
+  var checkStr = theForm.mob.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    if (ch == ".")
+    {
+      allNum += ".";
+      decPoints++;
+    }
+    else
+      allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"Mobile Number\" field.");
+    theForm.mob.focus();
+    return (false);
+  }
+
+  if (decPoints > 1)
+  {
+    alert("Please enter a valid number in the \"mob\" field.");
+    theForm.mob.focus();
+    return (false);
+  }
+
+  if (theForm.emailid.value == "")
+  {
+    alert("Please enter a value for the \"Email ID\" field.");
+    theForm.emailid.focus();
+    return (false);
+  }
+
+  if (theForm.enquiry.value == "")
+  {
+    alert("Please enter a value for the \"Enquiry\" field.");
+    theForm.enquiry.focus();
+    return (false);
+  }
+  return (true);
+}
+//--></script>
+</html>

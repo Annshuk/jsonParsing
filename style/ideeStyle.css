@@ -1,0 +1,406 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0; padding:0;}
+.clear{ clear:both}
+article,aside,audio,canvas,command,datalist,details,embed,figcaption,figure,footer,header,hgroup,keygen,meter,nav,output,progress,section,source,video {
+display:block;
+}
+mark,rp,rt,ruby,summary,time {display:inline;}
+@font-face
+{
+font-family:"Gotham Book"; src: url('../font/Gotham-Book.ttf'), url('Gotham-Book.ttf'); /* IE9 */} 
+body{ font-family: "Gotham Book"; font-size:11px; line-height:16px; text-align:center; height:100%; }
+#wraper{ width:100%; margin:0 auto; position:relative; text-align:left; height:100%;}
+#SectionWrap{ width:100%; margin:0; position:relative;}
+#asideBlue, #asideRed, #asideGreen{ background:url(../images/BlueBgRight.jpg) no-repeat top right; position:absolute; right:0; top:0; width:215px; height:735px;}
+#asideRed{background:url(../images/PinkBgRight.jpg) no-repeat top right;}
+#asideGreen{ background:url(../images/GreenBgRight.jpg) no-repeat top right;}
+/*----LOGO---------*/
+.logo{ margin-top:59px; display:block; width:100%; content:""}
+.logo img{ display:block; margin:0 auto}
+/*_-------------MENU RIGHT SIDE----------*/
+.navmenu{ margin:125px 0 0; display:block; list-style:none; padding:0;}
+.navmenu li{ display:block; width:120px; text-align:center; border-top:1px dotted #fff; margin:0 auto}
+.navmenu li a{ color:#fff; padding:13px 5px; text-decoration:none; display:block; text-transform:uppercase;}
+.navmenu li a:hover,  .navmenu li a.activeTab{ color:#003073;}
+#Container{ width:84%; float:left; position:relative; height:100%;}
+#Container .transparentBG
+{ background:url(../images/black_tpbg.png) repeat top left; background-size:100%; width:70%; height:675px; float:right; position:relative; padding:30px 0px 30px 0px;}
+
+#Container .transparentBG .topMenu{background:url(../images/blackLayer.png) repeat top left; width:97%; margin:0; padding:5px 10px; color:#04759f; list-style:none;}
+#Container .transparentBG .topMenu li{ color:#04759f; background:url(../images/seprator.png) no-repeat right 8px; display:block; float:left; padding:5px 15px 5px 5px }
+#Container .transparentBG .topMenu a{color:#04759f; text-decoration:none; display:block; text-transform:uppercase;}
+#Container .transparentBG .topMenu a:hover, #Container .transparentBG .topMenu a.current{ color:#fdf001}
+
+#Container .transparentBG .Content{ width:85%; padding:2% 1%; margin:0 20px 0 10px; color:#00bdf3; line-height:15px;}
+#Container .transparentBG .Content h2{ display:block; padding:5px 30px 5px 0px; font-size:16px; color:#fdf001; border-bottom:1px #ffffff dotted; width:200px;font-family: "Gotham Book"; text-transform:uppercase; letter-spacing:3px; font-weight:normal;}
+#Container .transparentBG .Content p{ display:block; line-height:16px; margin:10px 0}
+
+.scrollPane{overflow: auto; position:relative; width:98%;}
+.ScrollContent{ list-style:none; margin:45px 0 0; padding:0; position:relative; overflow:auto; height:200px}
+.ScrollContent dd{ 
+float:left; width:140px; height:150px; margin:0px 15px 15px 0;
+-moz-border-radius-topleft:8px;
+-moz-border-radius-topright:8px;
+-webkit-border-top-right-radius:8px;
+-webkit-border-top-left-radius:8px;
+border-top-left-radius:8px;
+border-top-right-radius:8px;
+background:#d6d6d8;
+}
+.ScrollContent dd .imgSize{ height:80px; margin:25px auto 10px; width:136px; text-align:center;}
+.ScrollContent dd .stickFoot{ width:100%; position:relative; font-size:9px}
+.ScrollContent dd .stickFoot .price{ display:block; width:85px; float:left; background:#c1c1c1; position:relative; padding:4px 5px; height:27px; color:#333333}
+.ScrollContent dd .stickFoot .price strong{ color:#404040; display:block; background:url(../images/rs.jpg) no-repeat center left; padding-left:9px}
+.ScrollContent dd .stickFoot .imgZoom{ float:right; width:35px; background:#58595b; position:relative; padding:4px 5px; height:27px; color:#b4b5b7}
+
+
+
+
+
+img { border:none; }
+#supersized-loader { position:absolute; top:50%; left:50%; z-index:0; width:60px; height:60px; margin:-30px 0 0 -30px; text-indent:-999em; background:url(../images/progress.gif) no-repeat center center;}
+#supersized {  display:block; position:fixed; left:0; top:0; overflow:hidden; z-index:-1; height:100%; width:100%; }
+#supersized img { width:auto; height:auto; position:relative; display:none; outline:none; border:none; }
+#supersized.speed img { -ms-interpolation-mode:nearest-neighbor; image-rendering: -moz-crisp-edges; }	/*Speed*/
+#supersized.quality img { -ms-interpolation-mode:bicubic; image-rendering: optimizeQuality; }			/*Quality*/
+#supersized li { display:block; list-style:none; z-index:-30; position:fixed; overflow:hidden; top:0; left:0; width:100%; height:100%; background:#111; }
+#supersized a { width:100%; height:100%; display:block; }
+#supersized li.prevslide { z-index:-20; }
+#supersized li.activeslide { z-index:-10; }
+#supersized li.image-loading { background:#111 url(../images/progress.gif) no-repeat center center; width:100%; height:100%; }
+#supersized li.image-loading img{ visibility:hidden; }
+#supersized li.prevslide img, #supersized li.activeslide img{ display:inline; }
+
+ul#slide-list{ padding:5px 0; position:fixed; bottom:0px; right:55%; }
+ul#slide-list li{ list-style:none; width:12px; height:12px; float:left; margin:0 5px 0 0; }
+ul#slide-list li.current-slide a, ul#slide-list li.current-slide a:hover{ background-position:0 0px; }
+ul#slide-list li a{ display:block; width:12px; height:12px; background:url(../images/nav-dot.png) no-repeat 0 -24px; }
+ul#slide-list li a:hover{ background-position:0 -12px; cursor:pointer; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+....

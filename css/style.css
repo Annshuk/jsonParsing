@@ -1,0 +1,220 @@
+@import "reset.css";
+@import "jquery.fancybox-1.3.4.css";
+/* Getting the new tags to behave */
+.loadingPic{ background:url(../style/spinningred.gif) no-repeat;}
+@font-face
+{
+font-family:"Gotham Book"; src: url('../font/Gotham-Book.ttf'), url('Gotham-Book.ttf'); /* IE9 */} 
+article,aside,audio,canvas,command,datalist,details,embed,figcaption,figure,footer,header,hgroup,keygen,meter,nav,output,progress,section,source,video {display:block;}
+mark,rp,rt,ruby,summary,time {display:inline;}
+/*global*/
+body{ font-family: "Gotham Book"; font-size:11px; line-height:16px; text-align:center; height:100%; overflow-x:hidden; overflow:hidden; }
+body p a {text-decoration:none;}
+body p a:hover {text-decoration:underline;}
+a {text-decoration:none;}
+h1>a{ margin-top:59px; display:block; width:100%;white-space: nowrap;overflow: hidden;}
+h1>a img{ display:block; margin:0 auto}
+h2, h1 {font: 27px/1.2em "Gotham Book";color: #fdf001;padding-bottom: 10px;}
+h3 {font: 16px/1.2em "Gotham Book";color: #fdf001; padding-bottom: 12px;}
+h4 {font: 14px/1.2em "Gotham Book";color: #fdf001;padding-bottom:3px;}
+figure{display: inline-block;}
+#glob {position:absolute;width:100%;height:100%;overflow:hidden;z-index:2;}
+#wraper{ width:100%; margin:0 auto; position:relative; text-align:left; height:100%;}
+#SectionWrap{ width:100%; margin:0; position:relative;}
+#asideBlue{ background:#0044ff url(../images/BlueBgRight.jpg) no-repeat top right; position:absolute; right:0; top:0; width:215px; height:auto; z-index:9}
+
+/*header*/
+header{position: relative;top:0px; z-index:100;}
+/*end header*/
+/*footer*/
+.rightFoot{ width:100%; position:relative; background: url(../images/bg-black.png) repeat; padding:10px 0px; height:20px}
+.rightFoot img{margin:0 auto; display:block; text-align:center; width:120px; border:0; cursor: pointer}
+footer {position:absolute;width:100%;z-index:100;bottom:0px;height:50px;}
+footer p {position: relative;font: 12px/1.2em Arial, sans-serif;color: #747474;white-space: pre;text-align: center;padding-top: 18px; text-transform:}
+footer p a{color: #747474;}
+/*end footer*/
+/*menu*/
+.menu {margin:90px 0 0; display:block; list-style:none; padding:0; position:relative}
+#menu>li { display:block; width:120px; text-align:center; border-top:1px dotted #fff; margin:0 auto; position:relative}
+#menu>li.no_bg {background: none;}
+#menu>li>a {color:#ffffff; padding:13px 5px; text-decoration:none; display:block; text-transform:uppercase; text-shadow:.3px .2px #000;}
+.submenu_1{position:absolute;z-index:9100; width:160px; left:-208px; top:-2px; display: none; background:#000000;  border-top:1px dotted #fff;}
+#menu>li> ul.submenu_1 li ul{position:absolute;z-index:9100; width:160px; left:-160px; top:-1px; display: none; background:#000000;  border-top:1px dotted #fff;}
+.submenu_1 li {position:relative; display:block; }
+.noborder{ border:0!important;}
+.MediaTheme a {color:#fff !important}
+.MediaTheme ul li a:hover, .MediaTheme ul li a.current{color:#82da83!important}
+.MediaTheme a:hover, .MediaTheme a.active{color:#1e4c1e!important}
+.ProductTheme ul li a:hover, .ProductTheme ul li a.current{color:#5961ea!important;}
+.ProductTheme a:hover, .ProductTheme a.active{color:#1218ac!important}
+.BrandTheme a {color:#fff !important}
+.BrandTheme a:hover, .BrandTheme a.active{color:#8c6e00!important}
+.HomeTheme a {color:#fff !important}
+.HomeTheme a:hover, .HomeTheme a.active{color:#002f75!important}
+.StoreTheme a {color:#fff !important}
+.StoreTheme a:hover, .StoreTheme a.active{color:#673907!important}
+.ContacTheme a {color:#fff !important}
+.ContacTheme a:hover, .ContacTheme a.active{color:#661524!important}
+.CareerTheme a {color:#fff !important}
+.CareerTheme a:hover, .CareerTheme a.active{color:#03302b!important}
+
+#menu>li> ul.submenu_1 li:first-child {background: url(../images/submenu_1_bg1.png) left center no-repea t;}
+#menu>li> ul.submenu_1 li.last{background: url(../images/submenu_1_bg3.png) left center no-repeat;}
+#menu>li> ul.submenu_1 li a { color:#0391bf!important; padding:5px 5px; text-decoration:none; display:block; text-transform:uppercase; border-bottom:1px #27221f solid;}
+#menu>li> ul.submenu_1 li>a:hover,
+#menu>li> ul.submenu_1 li.sfHover>a{color:#1218ac!important}
+
+
+#menu>li.MediaTheme> ul.submenu_1 li>a:hover,
+#menu>li.MediaTheme> ul.submenu_1 li.sfHover>a{color:#82da83!important}
+/*end menu*/
+/*pages*/
+#Container{ width:84%; float:left; position:relative; height:100%;}
+.transparentBG
+{ background:url(../images/black_tpbg.png) repeat top left; background-size:100%; width:75%; float:right; position:relative; padding:30px 0px 30px 0px;}
+
+.transparentBG .topMenu{background:url(../images/blackLayer.png) repeat top left; width:97%; margin:0; padding:5px 10px; color:#04759f; list-style:none;}
+.transparentBG .topMenu li{ color:#04759f; background:url(../images/seprator.png) no-repeat right 8px; display:block; float:left; padding:5px 15px 5px 5px }
+.transparentBG .topMenu li.lastchild{ background:none!important}
+.transparentBG .topMenu a{color:#04759f; text-decoration:none; display:block; text-transform:uppercase;}
+.transparentBG .topMenu a:hover, .transparentBG .topMenu a.current{ color:#fdf001!important}
+
+.transparentBG .Content{ color:#00bdf3; line-height:15px;}
+.transparentBG .Content h2 { display:block; padding:5px 30px 5px 0px; font-size:23px; color:#028bb9; border-bottom:1px #ffffff dotted; width:250px;font-family: "Gotham Book"; text-transform:uppercase; letter-spacing:3px; font-weight:normal;margin:10px 20px 0px 20px;}
+.transparentBG .Content p{ display:block; line-height:16px; margin:10px 0}
+.ProductDynmaic, .panelscroll, .heightCatch{padding:2% 1%; margin:0 20px 0 10px;}
+.scrollPane, .panelscroll{position:relative;margin:10px  0 0}
+.scrollPane h3{ display:block; padding:5px 30px 10px 0px; font-size:15px;  color:#028bb9; font-weight:bold; font-style:normal; text-transform:uppercase;}
+.ScrollContent{ list-style:none; margin:0px 0 0; padding:0; position:relative; width:98%}
+.ScrollContent dd{ 
+float:left; width:200px; height:150px; margin:0px 20px 20px 0;
+-moz-border-radius-topleft:8px;
+-moz-border-radius-topright:8px;
+-webkit-border-top-right-radius:8px;
+-webkit-border-top-left-radius:8px;
+border-top-left-radius:8px;
+border-top-right-radius:8px;
+background:#ffffff;
+}
+
+.videoBlock{float:left; margin:15px 0px 10px 20px; display:block}
+.videoBlock img{-moz-border-radius:5px; -webkit-border-radius:5px; -ms-border-radius:5px; border-radius:5px; border:1px #fff solid; width:200px; height:150px;}
+.videoPlayer{ width:90%; margin:50px auto 0!important; border:1px #fff solid;}
+.ScrollContent dd .imgSize{ height:80px; margin:25px auto 10px; width:180px; text-align:center;}
+.ScrollContent dd .stickFoot{ width:100%; position:relative; font-size:11px; text-transform:capitalize;}
+.ScrollContent dd .stickFoot .price{ display:block; width:130px; float:left; background:#c1c1c1; position:relative; padding:4px 5px; height:27px; color:#333333}
+.ScrollContent dd .stickFoot .price strong, span.price{ color:#404040; display:block; background:url(../images/rs.jpg) no-repeat center left; padding-left:9px}
+.ScrollContent dd .stickFoot .imgZoom{ float:right; width:50px; background:#58595b; position:relative; padding:4px 5px; height:27px; color:#b4b5b7}
+.ScrollContent dd .stickFoot .imgZoom a{ text-decoration:none;  color:#b4b5b7; display:block;}
+span.price{ display:inline!important; background:url(../images/yrs.jpg) no-repeat center left; color:#fdf001}
+.productImg{ -moz-border-radius:8px; -webkit-border-radius:8px; border-radius:8px; width:230px; height:200px; float:left; background:#fff; padding:10px;}
+.productImg IMG{ margin:30px auto 0; display:block;}
+.productDetails{ float:left; margin:10px 0px 0 10px}
+.yellowBold, .blueTxt{ color:#fdf001; font-weight:bold; display:block; padding:3px 5px; text-transform:uppercase; margin:2px 0px; font-size:12px;}
+.blueTxt{ font-weight:normal; margin:0!important; display:block; color:#00bdf3;}
+.margin45{ margin-top:15px;}
+.descBox, .descBox h4{ color:#028bb9;}
+.descBox p{ padding:0 5px; }
+.descBox a{ text-align:left; color:#00bdf3}
+.descBox a:hover, .productInfo ul.prodCat li a{  color:#fdf001;}
+.adCompany, .productInfo ul.prodCat{ list-style:none; margin:10px 0 0; padding:0;}
+.adCompany li{ display:block; float:left; width:153px; height:117px; margin:10px;}
+.adCompany li a{border:0; text-decoration:none;}
+.last{ border:0 none!important;}
+.productInfo{ background:url(../images/blackLayer.png) repeat top left; width:100%; padding:10px 0; }
+.productInfo ul.prodCat { float:left; border-left:1px #fff dotted; height:90px; width:170px; padding:20px 5px 0}
+.productInfo ul.prodCat li{ display:block; float:left; margin:0px 30px; }
+.productInfo h2, .videoBlock h2{ text-transform:uppercase; font-size:12px; font-weight:400; display:block; margin:20px 0px 0 20px; padding:10px;color:#0491c1!important;}
+.productInfo ul.prodCat li a{ background:url(../images/bullets.png) no-repeat 5px 2px; height:9px; padding:0 0 0 20px; color:#0491c1!important; text-transform:capitalize}
+.productInfo ul.prodCat li a:hover{ background:url(../images/bullets.png) no-repeat 5px -7.8px;  color:#fdf001!important; }
+h3.subHead{ display:block; padding:5px 30px 0px 0px; font-size:15px; color:#fdf001; font-weight:bold; font-style:normal; text-transform:uppercase; margin-left:10px;}
+
+
+#content {position:absolute; width:80%!important; height: 100%; right:214px; text-align:left;  }
+#content> ul {width:100%; height: 100%; position:relative; background: url(../images/bg-black.png) repeat-y scroll 0 0 transparent;}
+#content>ul>li.no_disp{display: none;width: 0;height: 0;}
+#content>ul>li {position:absolute;width:100%;background: none;overflow: hidden;}
+clear{ clear:both;}
+#adressBox{ position:relative; border:1px #3c3c3c solid;margin-top:5px; padding:10px; display:block; width:300px; float:left; }
+.overflow{ height:300px; overflow:auto; position:relative;}
+.overflow p{ border-bottom:1px #626262 solid; padding-bottom:5px;}
+/* Forms*/
+#form1 , #form2{position: relative;}
+ul.FormList{ margin:20px 0 0; list-style:none; width:340px; float:left;}
+ul.FormList li.trrow{ padding:5px; clear:both; position:relative;}
+ul.FormList li.trrow .tdField{ float:left; text-align:right; width:110px}
+ul.FormList li.trrow .tdLabel{ margin-left:129px; text-align:left}
+.input, .textarea, .select {
+position: relative;
+background: #494949;
+border:1px #525252 solid;
+color:#FAF305;
+padding: 5px 5px 7px;
+width: 200px;
+outline:none;
+box-shadow:none;
+display: inline-block;
+font-style:normal;
+font-size:11px;
+}
+ .select { padding:0;}
+  .select option{ padding:2px 2px; border:0;}
+.textarea {width:203px; height:80px;overflow:auto;resize: none;}
+label {display:inline-block;min-height: 50px;position: relative;width: 540px;}
+.title{display: inline-block;width: 83px;font: 16px/1.2em "Gotham Book";font-style: italic;color: #b7aa8f;}
+.success{position: relative;padding-bottom: 3px;color: #fff;}
+.error, #form1 .empty {text-align: left;display:none;font-size:10px;color:#fff;margin-left: 89px;top: -4px;position: relative;}
+fieldset{height: 210px;}
+.btns{ display:block; padding:5px 10px; float:left; margin-right:10px; cursor:pointer}
+/* Form defaults */
+input, select, textarea {font: normal 11px/1.2em "Gotham Book";vertical-align:middle;}
+/*end forms*/img { border:none; }
+/*background BG------------*/
+#supersized-loader { position:absolute; top:50%; left:50%; z-index:0; width:60px; height:60px; margin:-30px 0 0 -30px; text-indent:-999em; background:url(../images/progress.gif) no-repeat center center;}
+#supersized {  display:block; position:fixed; left:0; top:0; overflow:hidden; z-index:-1; height:100%; width:100%; }
+#supersized img { width:auto; height:auto; position:relative; display:none; outline:none; border:none; }
+#supersized.speed img { -ms-interpolation-mode:nearest-neighbor; image-rendering: -moz-crisp-edges; }	/*Speed*/
+#supersized.quality img { -ms-interpolation-mode:bicubic; image-rendering: optimizeQuality; }			/*Quality*/
+#supersized li { display:block; list-style:none; z-index:-30; position:fixed; overflow:hidden; top:0; left:0; width:100%; height:100%; background:#111; }
+#supersized a { width:100%; height:100%; display:block; }
+#supersized li.prevslide { z-index:-20; }
+#supersized li.activeslide { z-index:-10; }
+#supersized li.image-loading { background:#111 url(../images/progress.gif) no-repeat center center; width:100%; height:100%; }
+#supersized li.image-loading img{ visibility:hidden; }
+#supersized li.prevslide img, #supersized li.activeslide img{ display:inline; }
+
+ul#slide-list, .footCopyright{ padding:5px 0; position:fixed; bottom:0px; right:55%; }
+ul#slide-list li{ list-style:none; width:12px; height:12px; float:left; margin:0 5px 0 0; }
+ul#slide-list li.current-slide a, ul#slide-list li.current-slide a:hover{ background-position:0 0px; }
+ul#slide-list li a{ display:block; width:12px; height:12px; background:url(../images/nav-dot.png) no-repeat 0 -24px; }
+ul#slide-list li a:hover{ background-position:0 -12px; cursor:pointer; }
+.clear{ clear:both}
+.footCopyright, .footCopyright a{ left:10px; color:#0491c1; text-align:left; width:30%!important;text-transform: capitalize}
+
+/* Preloader */
+
+#preloader {
+    position:absolute; width:100%; height:100%;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: url(../images/dark-black.png) repeat; /* change if the mask should have another color then white */
+    z-index:99; /* makes sure it stays on top */
+}
+
+#status {
+    width:200px;
+    height:200px;
+    position:absolute;
+    left:50%; /* centers the loading animation horizontally one the screen */
+    top:50%; /* centers the loading animation vertically one the screen */
+    background-image: url(../images/ajax-loader.gif); /* path to your loading animation */
+    background-repeat:no-repeat;
+    background-position:center;
+    margin:-100px 0 0 -100px; /* is width and height divided by two */
+}
+
+
+
+.relatedImg{ width:145px; height:106px; float:left; margin-right:10px; padding:20px 10px 10px; border-radius:8px; background:#fff; -moz-border-radius:8px;}
